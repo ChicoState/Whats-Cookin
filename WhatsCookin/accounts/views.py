@@ -51,4 +51,4 @@ def logoutUser(request):
 
 @login_required(login_url='login')
 def dashboard(request):
-   return render(request, 'accounts/dashboard.html')
+   return render(request, 'pantry/dashboard.html')
