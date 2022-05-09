@@ -80,16 +80,17 @@
                                     <td>{{fridge.date_stocked}}</td>
                                     <td>
                                         <a class="btn btn btn-sm  btn-info" href="{% url 'updateFridge' customer.id fridge.id %}">Fill this Fridge</a>
-                                        <a class="btn btn btn-sm  btn-danger"  href="{% url 'deleteFridge' fridge.id %}">Delete</a>
+                                        <a class="btn btn btn-sm  btn-danger"  href="{% url 'deleteFridge' customer.id fridge.id %}">Delete</a>
                                     </td>
                                     
                                     <tr> 
                                         <table class="table">
-                                            <th>Ingredients</th>
-                                            <tr></tr>
+                                            <th>Ingredients in {{fridge.name}}</th>
+                                            <tr>
                                             {% for i in fridge.ingredient.all %}
                                             <td>{{i.name}}</td>
                                             {% endfor %}
+                                            </tr>
                                         </table>
                                     </tr>
                                 </tr>
