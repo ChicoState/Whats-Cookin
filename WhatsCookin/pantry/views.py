@@ -6,7 +6,9 @@ from .forms import FridgeForm
 
 # Create your views here.
 # Views define how the html page will render and look. they use data from the model
-
+@login_required(login_url='login')
+def Pantry(request):
+    return render(request, "Pantry/Pantry.html")
 
 @login_required(login_url='login')
 def dashboard(request, pri_key):
