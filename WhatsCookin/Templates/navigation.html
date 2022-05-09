@@ -24,6 +24,9 @@
       <ul class="navbar-nav me-3 mb-2 mb-lg-0">
       {% if user.is_authenticated %}
       <li>
+        <a class="nav-link" href="/dashboard/">Account dashboard</a>
+      </li>
+      <li>
         <a class="nav-link" href="/logout/">Logout ({{user.username}})</a>
       </li>
       {% else %}
