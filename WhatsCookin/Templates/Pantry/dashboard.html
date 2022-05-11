@@ -72,15 +72,15 @@
                             <tr>
                                 <th>Your Fridges</th>
                                 <th>Last stocked</th>
-                                <th></th>
+                                <th><a class="btn btn-primary  btn-sm btn-block" href="{% url 'createFridge' %}">Create Fridge</a></th>
                             </tr>
                                 {% for fridge in fridges %}
                                 <tr>
                                     <td>{{fridge.name}}</td>
                                     <td>{{fridge.date_stocked}}</td>
                                     <td>
-                                        <a class="btn btn btn-sm  btn-info" href="{% url 'updateFridge' customer.id fridge.id %}">Fill this Fridge</a>
-                                        <a class="btn btn btn-sm  btn-danger"  href="{% url 'deleteFridge' customer.id fridge.id %}">Delete</a>
+                                        <a class="btn btn btn-sm  btn-info" href="{% url 'updateFridge' fridge.id %}">Fill this Fridge</a>
+                                        <a class="btn btn btn-sm  btn-danger"  href="{% url 'deleteFridge' fridge.id %}">Delete</a>
                                     </td>
                                     
                                     <tr> 
