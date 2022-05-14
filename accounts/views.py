@@ -48,7 +48,8 @@ def loginPage(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('dashboard')
+    return redirect('login')
+
 
 @login_required(login_url='login')
 def dashboard(request):
