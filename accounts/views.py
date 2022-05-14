@@ -50,7 +50,6 @@ def logoutUser(request):
     logout(request)
     return redirect('login')
 
-
 @login_required(login_url='login')
 def dashboard(request):
     if(Recipe.objects.count()==0):
