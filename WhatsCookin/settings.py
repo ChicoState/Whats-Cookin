@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_on_heroku
 # import environ
 # env = environ.Env()
 # environ.Env.read_env()
@@ -130,3 +131,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR]
+
+# Configure Django App for Heroku.
+django_on_heroku.settings(locals())
