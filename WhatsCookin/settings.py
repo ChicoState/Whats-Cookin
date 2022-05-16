@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_on_heroku
 # import environ
 # env = environ.Env()
 # environ.Env.read_env()
@@ -30,7 +29,7 @@ STATIC_DIR = os.path.join(BASE_DIR, "Static")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["whats-cookin430.herokuapp.com"]
 
 SECRET_KEY = 'sj_ngm%5h8b$t0fl0e-q!7=l%d2(j1kc!)a&=gj&=dms#ynpo)'
 
